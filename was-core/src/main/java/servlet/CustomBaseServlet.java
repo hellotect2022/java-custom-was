@@ -1,23 +1,28 @@
 package servlet;
 
+import http.CustomHttpRequest;
+import http.CustomHttpResponse;
+
 import java.io.IOException;
 import java.io.Writer;
 
 public abstract class CustomBaseServlet implements CustomServlet{
-    protected void writeOk(Writer writer, String contentType, String body) throws IOException {
-        writer.write("HTTP/1.1 200 OK\r\n");
-        writer.write("Content-Type: "+contentType+"\r\n\r\n");
-        writer.write("Content-Length: " + body.length() + "\r\n");
-        writer.write(body);
-        writer.flush();
+    @Override
+    public void service(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
+        String method = req.getMethod();
+        switch (method) {
+            case "GET": doGet(req, res); break;
+            case "POST": doPost(req, res); break;
+            case "PUT": doPut(req, res); break;
+            case "DELETE": doDelete(req, res); break;
+            default:
+                res.setStatus(405);
+                res.write("405 Method Not Allowed");
+        }
     }
 
-    protected void writeError(Writer writer, int statusCode, String message) throws IOException {
-        writer.write("HTTP/1.1 "+statusCode+" Error\r\n");//out.write("Content-Type: text/plain\r\n");
-        writer.write("Content-Type: text/html\r\n");
-        writer.write("Content-Length: " + message.length() + "\r\n");
-        writer.write("\r\n");
-        writer.write(message);
-        writer.flush();
-    }
+    protected void doGet(CustomHttpRequest req, CustomHttpResponse res) throws IOException {}
+    protected void doPost(CustomHttpRequest req, CustomHttpResponse res) throws IOException {}
+    protected void doPut(CustomHttpRequest req, CustomHttpResponse res) throws IOException {}
+    protected void doDelete(CustomHttpRequest req, CustomHttpResponse res) throws IOException {}
 }

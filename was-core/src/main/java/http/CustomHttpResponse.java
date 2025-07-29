@@ -13,7 +13,6 @@ public class CustomHttpResponse {
     public CustomHttpResponse(BufferedWriter writer) {
         this.writer = writer;
         setHeader("Content-Type","text/plain");
-
     }
 
     public void setStatus(int statusCode) {
@@ -22,6 +21,10 @@ public class CustomHttpResponse {
 
     public void setHeader(String key, String value) {
         headers.put(key,value);
+    }
+
+    public void setContentType(String contentType) {
+        setHeader("Content-Type",contentType);
     }
 
     public void write(String body) throws IOException {
