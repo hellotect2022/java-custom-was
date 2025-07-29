@@ -25,6 +25,11 @@
         "500": "500.html"
       }
     }
+  },
+  "servlet_mappings" : {
+    "/Greeting": "Hello",
+    "/super.Greeting": "service.Hello",
+    "/api/hello": "api.HelloServlet"
   }
 
 }

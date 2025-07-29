@@ -1,5 +1,6 @@
 package config;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,9 @@ public class ConfigLoader {
     private ConfigLoader() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+
             // 리소스 내에서 파일 읽기
             InputStream is = ConfigLoader.class.getClassLoader().getResourceAsStream("config.json");
             if (is == null) throw new RuntimeException("config.json 파일을 찾을 수가 없습니다. !!");

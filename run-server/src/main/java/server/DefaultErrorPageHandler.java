@@ -1,7 +1,9 @@
-package handler;
+package server;
 
 import config.ConfigLoader;
 import config.HostConfig;
+import config.ServerConfig;
+import handler.ErrorPageHandler;
 import http.CustomHttpRequest;
 import http.CustomHttpResponse;
 
@@ -10,14 +12,19 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class DefaultErrorPageHandler implements ErrorPageHandler{
+public class DefaultErrorPageHandler implements ErrorPageHandler {
+    private final ServerConfig serverConfig;
+    public DefaultErrorPageHandler(ServerConfig serverConfig) {
+        this.serverConfig = serverConfig;
+    }
+
     @Override
     public void handle404(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
         HostConfig host = getHostConfig(req);
         String filePath = host.http_root + "/" + host.error_pages.get("404");
         String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
         res.setStatus(404);
-        res.setContentType("text/html");
+        res.setHeader("Content-type", "text/html");
         res.write(body);
     }
 
@@ -32,15 +39,15 @@ public class DefaultErrorPageHandler implements ErrorPageHandler{
             body = "<h1>500 Internal Server Error</h1><pre>" + ex.getMessage() + "</pre>";
         }
         res.setStatus(500);
-        res.setContentType("text/html");
+        res.setHeader("Content-type", "text/html");
         res.write(body);
     }
 
     private HostConfig getHostConfig(CustomHttpRequest req) {
         String hostHeader = req.getHeader("Host");
-        return ConfigLoader.getInstance().getServerConfig().hosts.getOrDefault(
+        return serverConfig.hosts.getOrDefault(
                 hostHeader,
-                ConfigLoader.getInstance().getServerConfig().hosts.get("default")
+                serverConfig.hosts.get("default")
         );
     }
 }

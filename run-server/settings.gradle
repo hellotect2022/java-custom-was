@@ -1,0 +1,5 @@
+rootProject.name = 'run-server'
+
+include 'was-core'
+project(':was-core').projectDir = file('../was-core')
+

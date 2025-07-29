@@ -1,4 +1,5 @@
-import handler.DefaultErrorPageHandler;
+package server;
+
 import handler.ErrorPageHandler;
 import http.CustomHttpRequest;
 import http.CustomHttpResponse;
@@ -15,10 +16,12 @@ import java.util.Map;
 public class RequestProcessor implements Runnable {
     private final Logger logger = LoggerFactory.getLogger(RequestProcessor.class);
     private final Socket conn;
+    private final ErrorPageHandler errorPageHandler;
 
 
-    public RequestProcessor(Socket conn) {
+    public RequestProcessor(Socket conn, ErrorPageHandler errorPageHandler) {
         this.conn = conn;
+        this.errorPageHandler = errorPageHandler;
     }
 
     @Override
@@ -41,9 +44,6 @@ public class RequestProcessor implements Runnable {
             CustomHttpResponse res = new CustomHttpResponse(out);
 
             String className = req.getPath().substring(1);
-
-
-            ErrorPageHandler errorPageHandler = new DefaultErrorPageHandler();
 
             try {
                 // Java Reflection API 사용
