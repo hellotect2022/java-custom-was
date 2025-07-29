@@ -116,7 +116,7 @@ public class RequestProcessor implements Runnable {
         Map<String,String> requestHeaders = new HashMap<>();
         String line;
         while ((line = in.readLine()) != null && !line.isEmpty()) {
-            logger.info("Request: "+ line);
+            logger.debug("Request: "+ line);
             int colonIndex = line.indexOf(":");
             if (colonIndex != -1) {
                 String key = line.substring(0,colonIndex).trim();

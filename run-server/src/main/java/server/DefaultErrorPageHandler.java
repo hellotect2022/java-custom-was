@@ -24,7 +24,7 @@ public class DefaultErrorPageHandler implements ErrorPageHandler {
         String filePath = host.http_root + "/" + host.error_pages.get("404");
         String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
         res.setStatus(404);
-        res.setHeader("Content-type", "text/html");
+        res.setHeader("Content-Type", "text/html");
         res.write(body);
     }
 
@@ -39,7 +39,7 @@ public class DefaultErrorPageHandler implements ErrorPageHandler {
             body = "<h1>500 Internal Server Error</h1><pre>" + ex.getMessage() + "</pre>";
         }
         res.setStatus(500);
-        res.setHeader("Content-type", "text/html");
+        res.setHeader("Content-Type", "text/html");
         res.write(body);
     }
 
