@@ -1,0 +1,35 @@
+package http;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CustomHttpRequest {
+    private final String path;
+    private final Map<String, String> attributes;
+    private final Map<String, String> headers;
+
+    public CustomHttpRequest(String rawPath, Map<String, String> headers) {
+        this.headers = headers;
+        String[] parts = rawPath.split("\\?");
+        this.path = parts[0];
+        this.attributes = new HashMap<>();
+        if (parts.length > 1) {
+            for (String pair : parts[1].split("&")) {
+                String[] kv = pair.split("=");
+                if (kv.length == 2) attributes.put(kv[0],kv[1]);
+            }
+        }
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public String getAtrributes(String name) {
+        return attributes.get(name);
+    }
+
+    public String getHeader(String key){
+        return headers.getOrDefault(key,"");
+    }
+}

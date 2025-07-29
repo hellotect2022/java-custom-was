@@ -1,0 +1,30 @@
+{
+  "port" : 8081,
+  "hosts" : {
+    "a.com": {
+      "http_root": "./www/a",
+      "error_pages": {
+        "403": "403.html",
+        "404": "404.html",
+        "500": "500.html"
+      }
+    },
+    "b.com": {
+      "http_root": "./www/b",
+      "error_pages": {
+        "403": "403_b.html",
+        "404": "404_b.html",
+        "500": "500_b.html"
+      }
+    },
+    "default": {
+      "http_root": "./www/default",
+      "error_pages": {
+        "403": "403.html",
+        "404": "404.html",
+        "500": "500.html"
+      }
+    }
+  }
+
+}

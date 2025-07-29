@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    api 'ch.qos.logback:logback-classic:1.4.1' // 외부 노출이 필요한 API  java-library 플러그인을 적용했을 때만 사용할 수 있는 의존성 스코프
+    api 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+test {
+    useJUnitPlatform()
+}
