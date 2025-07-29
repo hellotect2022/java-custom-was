@@ -1,5 +1,0 @@
-rootProject.name = 'TEST'
-
-include 'was-core'
-project(':was-core').projectDir = file('../was-core')
-
