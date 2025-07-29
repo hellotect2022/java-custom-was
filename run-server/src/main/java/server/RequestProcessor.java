@@ -1,5 +1,7 @@
 package server;
 
+import config.ConfigLoader;
+import config.HostConfig;
 import handler.ErrorPageHandler;
 import http.CustomHttpRequest;
 import http.CustomHttpResponse;
@@ -10,6 +12,8 @@ import servlet.CustomServlet;
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,12 +44,42 @@ public class RequestProcessor implements Runnable {
             String version = tokens[2];
 
             Map<String,String> requestHeaders = processHeaders(in);
-            CustomHttpRequest req = new CustomHttpRequest(fullPath, requestHeaders);
+            CustomHttpRequest req = new CustomHttpRequest(fullPath, requestHeaders, method, version);
             CustomHttpResponse res = new CustomHttpResponse(out);
 
-            String className = req.getPath().substring(1);
 
             try {
+                String path = req.getPath();
+                String className;
+                Map<String, String> mappings = ConfigLoader.getInstance().getServerConfig().servlet_mappings;
+
+                // 1. 루트 요청이면 index.html 반환 시도
+                if ("/".equals(path)) {
+                    String host = req.getHeaders().getOrDefault("Host", "default");
+                    HostConfig hostConfig = ConfigLoader.getInstance()
+                            .getServerConfig()
+                            .hosts
+                            .getOrDefault(host, ConfigLoader.getInstance().getServerConfig().hosts.get("default"));
+
+                    String indexPath = hostConfig.http_root + "/index.html";
+
+                    try {
+                        String body = new String(Files.readAllBytes(Paths.get(indexPath)), StandardCharsets.UTF_8);
+                        res.setStatus(200);
+                        res.setContentType("text/html");
+                        res.write(body);
+                    } catch (IOException e) {
+                        errorPageHandler.handle404(req, res);  // or handle500
+                    }
+                }
+
+
+                if (mappings.containsKey(path)) {
+                    className = mappings.get(path);
+                } else {
+                    // fallback 로직: "/Hello" → "Hello"
+                    className = path.startsWith("/") ? path.substring(1) : path;
+                }
                 // Java Reflection API 사용
                 // JVM 이 현재 classpath 에서 해당 이름의 클래스를 동적으로 찾아서 Class 객체로 반환
                 //  Class<?> 는 class 의 메타데이타
