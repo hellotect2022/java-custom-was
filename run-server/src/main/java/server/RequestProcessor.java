@@ -46,7 +46,7 @@ public class RequestProcessor implements Runnable {
             String version = tokens[2];
 
             Map<String,String> requestHeaders = processHeaders(in);
-            CustomHttpRequest req = new CustomHttpRequest(fullPath, requestHeaders, method, version);
+            CustomHttpRequest req = new CustomHttpRequest(fullPath, requestHeaders, method, version, in);
             CustomHttpResponse res = new CustomHttpResponse(out);
 
 
