@@ -19,6 +19,16 @@ public class DefaultErrorPageHandler implements ErrorPageHandler {
     }
 
     @Override
+    public void handle403(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
+        HostConfig host = getHostConfig(req);
+        String filePath = host.http_root + "/" + host.error_pages.get("403");
+        String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+        res.setStatus(403);
+        res.setHeader("Content-Type", "text/html");
+        res.write(body);
+    }
+
+    @Override
     public void handle404(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
         HostConfig host = getHostConfig(req);
         String filePath = host.http_root + "/" + host.error_pages.get("404");

@@ -2519,3 +2519,950 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 2025-07-29 20:36:04,845 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Dest: document
 2025-07-29 20:36:04,845 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept-Encoding: gzip, deflate, br, zstd
 2025-07-29 20:36:04,845 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 20:38:07,919 INFO [] s.RequestProcessor [RequestProcessor.java:36] Request-Line: null
+2025-07-29 20:48:52,145 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 20:48:52,349 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 20:49:43,872 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 20:50:14,781 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 20:50:18,213 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 20:50:58,129 ERROR [main] c.ConfigLoader [ConfigLoader.java:26] Config 로딩 실패
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at com.fasterxml.jackson.core.json.ByteSourceJsonBootstrapper.ensureLoaded(ByteSourceJsonBootstrapper.java:547)
+	at com.fasterxml.jackson.core.json.ByteSourceJsonBootstrapper.detectEncoding(ByteSourceJsonBootstrapper.java:137)
+	at com.fasterxml.jackson.core.json.ByteSourceJsonBootstrapper.constructParser(ByteSourceJsonBootstrapper.java:266)
+	at com.fasterxml.jackson.core.JsonFactory._createParser(JsonFactory.java:1863)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:1262)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3883)
+	at config.ConfigLoader.<init>(ConfigLoader.java:24)
+	at config.ConfigLoader$LazyHolder.<clinit>(ConfigLoader.java:40)
+	at config.ConfigLoader.getInstance(ConfigLoader.java:32)
+	at server.ServerRunner.<init>(ServerRunner.java:25)
+	at HttpServerApplication.main(HttpServerApplication.java:23)
+2025-07-29 20:51:42,102 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 20:51:42,309 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 20:51:42,430 INFO [] s.RequestProcessor [RequestProcessor.java:36] Request-Line: GET /service.Hello2 HTTP/1.1
+2025-07-29 20:51:42,431 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Host: localhost:8081
+2025-07-29 20:51:42,431 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Connection: keep-alive
+2025-07-29 20:51:42,431 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Cache-Control: max-age=0
+2025-07-29 20:51:42,432 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 20:51:42,432 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: sec-ch-ua-mobile: ?0
+2025-07-29 20:51:42,432 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 20:51:42,432 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 20:51:42,432 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 20:51:42,432 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 20:51:42,433 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Site: none
+2025-07-29 20:51:42,433 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Mode: navigate
+2025-07-29 20:51:42,433 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-User: ?1
+2025-07-29 20:51:42,433 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Dest: document
+2025-07-29 20:51:42,433 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 20:51:42,434 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 20:53:11,866 INFO [] s.RequestProcessor [RequestProcessor.java:36] Request-Line: null
+2025-07-29 20:53:11,866 INFO [] s.RequestProcessor [RequestProcessor.java:36] Request-Line: null
+2025-07-29 20:53:11,867 INFO [] s.RequestProcessor [RequestProcessor.java:36] Request-Line: GET /Greeting HTTP/1.1
+2025-07-29 20:53:11,867 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Host: localhost:8081
+2025-07-29 20:53:11,867 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Connection: keep-alive
+2025-07-29 20:53:11,867 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: sec-ch-ua-mobile: ?0
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Site: none
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Mode: navigate
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-User: ?1
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Sec-Fetch-Dest: document
+2025-07-29 20:53:11,868 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 20:53:11,869 INFO [] s.RequestProcessor [RequestProcessor.java:85] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:01:01,200 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:01:01,378 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:01:08,108 INFO [] s.RequestProcessor [RequestProcessor.java:37] Request-Line: GET /Greeting HTTP/1.1
+2025-07-29 21:01:08,108 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Host: localhost:8081
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Connection: keep-alive
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Cache-Control: max-age=0
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:01:08,109 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:01:08,110 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:01:08,110 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-Site: none
+2025-07-29 21:01:08,110 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:01:08,110 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-User: ?1
+2025-07-29 21:01:08,110 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-Dest: document
+2025-07-29 21:01:08,111 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:01:08,111 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:01:38,916 INFO [] s.RequestProcessor [RequestProcessor.java:37] Request-Line: GET /Greeting HTTP/1.1
+2025-07-29 21:01:38,916 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Host: localhost:8081
+2025-07-29 21:01:38,916 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Connection: keep-alive
+2025-07-29 21:01:38,916 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-Site: none
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-User: ?1
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Sec-Fetch-Dest: document
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:01:38,917 INFO [] s.RequestProcessor [RequestProcessor.java:94] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:26:07,898 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:26:08,084 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:26:16,225 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:26:16,226 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:26:16,227 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:26:16,227 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:26:16,227 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:26:16,227 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:26:16,227 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:26:16,227 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:26:23,024 ERROR [] s.RequestProcessor [RequestProcessor.java:102] Cannot read field "http_root" because "hostConfig" is null
+java.lang.NullPointerException: Cannot read field "http_root" because "hostConfig" is null
+	at server.RequestProcessor.run(RequestProcessor.java:64)
+	at java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:314)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+2025-07-29 21:26:40,133 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:26:40,133 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:26:40,134 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:28:32,437 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:28:32,619 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:28:32,676 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:28:32,677 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:28:32,677 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:28:32,677 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:28:32,678 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:28:32,678 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:28:32,678 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:28:32,678 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:28:32,678 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:28:32,679 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:28:32,680 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:28:32,680 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:28:32,680 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:28:32,680 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:28:32,681 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:41:33,099 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:41:33,263 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:41:40,808 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /Greeting HTTP/1.1
+2025-07-29 21:41:40,809 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:41:40,809 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:41:40,809 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Cache-Control: max-age=0
+2025-07-29 21:41:40,810 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:41:40,810 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:41:40,810 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:41:40,810 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:41:40,810 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:41:40,810 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:41:40,811 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:41:40,811 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:41:40,811 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:41:40,811 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:41:40,811 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:41:40,812 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:41:41,084 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /Greeting HTTP/1.1
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:41:41,085 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:41:41,086 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:41:41,086 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:41:41,086 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:41:41,086 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:41:41,086 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:41:45,840 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:41:45,841 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:41:45,841 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:41:45,841 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:41:45,841 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:41:45,841 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:41:45,842 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:41:45,842 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:41:45,842 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Purpose: prefetch;prerender
+2025-07-29 21:41:45,842 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Purpose: prefetch
+2025-07-29 21:41:45,842 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:41:45,842 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:41:45,843 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:41:45,843 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:41:45,843 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:41:45,843 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:41:45,843 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:46:23,512 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: � �PL<N�M� �Hȱ"n߰�K�M���q6� +�wQ~�]�L�pސ�^ثªg"�����c  ���+�/�,�0̨̩�� � � / 5 a��  D�  h2    3��zz  ����L=KNz�iN<7��x;O�e_qk�1N��E9�;/[۷n"e�~�\|�(eقd|�9rE�6V���٨�#��{ QS�fk}dD����5�r5�25P�ˑizE[�V/��U�o�W�Ȅ��²H��Ivk��2N1ץ�5���t�k\�U\�	�#1��EuQi�s�$�e���8�p62#�R.l��װ|�(lh��*x�.�ļ a�Y]<:.֦3@Y����'�Y��'KQ
+2025-07-29 21:46:23,514 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: j׳N���rNiI���\�\�#��sI!w�'V��M�v��kú�a�u�B�4�s�� ;\ps�l�2S �^X�C�-J��d#�� �W'a��rD ��70<\�)` CA�0
+2025-07-29 21:46:23,515 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: ��d�E����v�|ϐ�jb��l2�XwY�YU�y	��B7�����Z�S���#9��H�*��o�xO�$�w���ѹsF)5e�hk%κ
+2025-07-29 21:46:23,515 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �Ȱ"5�#:ehtWg����x�H�<�Q��t���*{Y�M�y��2��|P����R�����Y�ժ����G&���e��(�Z�L$�
+2025-07-29 21:46:23,516 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �D:B<12�Yh�}Y�i�YU�o~���q�(��i�ȫ������Pg?��t��Ӆ,��L���dT��Zb��WQa@�ی8�]�U9�tsr�蕮���`z�.S��A<zM�D�B'�a wk@�j��GJs��0��TCR"��(n{�'���⣛a� 
+2025-07-29 21:46:23,516 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: 	�󊍞���c�E�Y�h�\�.<�is)?w��S{���|G
+2025-07-29 21:46:23,516 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: ;`K�ّL��h<�U�[�} P�rYj�3�7=1���S�rf-v�g�ڎ�{��AF��RA!'
+2025-07-29 21:46:23,516 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �C<���[�6�oSlT6���w*�Z���9��@�,�����HSl��fnP{	�
+2025-07-29 21:46:23,516 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �Է�����_� ���;�m� �5�:x
+2025-07-29 21:46:23,517 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Z
+2025-07-29 21:46:23,517 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �x�"|�ҧd�seuP�Kt�������{	���V���xg���	5����g
+2025-07-29 21:46:23,518 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: j!��Z�3�Ǜ�^c^�0���4�@�r��9�����K�~0C�׮��WBfG�I3X��Y>�����1C�Tk�I����qS ط|��^��bJK4�F���u�6����!��n�Wyy"�;Ɍ���C��}mS']y�ojT%|������h��xz\rl�8"I�\��0�bjG�~=*Q	~�Y>�����m���-�oRmXƄX���na��q*��i�\R�l�X,U�
+2025-07-29 21:46:23,518 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:     �A�K`�=c�t+c��0G"�g�N�`0���4
+2025-07-29 21:46:23,518 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:    
+2025-07-29 21:46:23,519 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:    a.com -  
+2025-07-29 21:46:23,520 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:   
+2025-07-29 21:46:23,520 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: zz�       
+2025-07-29 21:46:23,520 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:       #        �
+2025-07-29 21:46:23,520 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:  �   !  �	�<ʒ.^ﺬ�r|zNr�
+2025-07-29 21:46:23,520 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �{p�~k$?@7 �;4��b���@C�Ș���95�1Pn��ʂ��$p���:pá�[�S�w�+�55��c�
+2025-07-29 21:46:23,521 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: &�j�������%�����D��5��k�o'�	v�$����ﰂ)��������;��7T��6�4�*^�w�]�W��O��g�T�<w�A�� E*s{Н�B�����b�G�ĩ + 
+2025-07-29 21:46:23,523 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: � �G	���)�{a�g���ڦ�:l�ɜ�2׏	�� ���ϩ��_N�ғ�z&�C����e�o����  ���+�/�,�0̨̩�� � � / 5 a��   
+2025-07-29 21:46:23,524 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:   
+2025-07-29 21:46:23,524 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: zz�               
+2025-07-29 21:46:23,525 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:    a.com      h2http/1.1�
+2025-07-29 21:46:23,526 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:  �   7  颭��0�mKq�&`Bӎ�C]���Yg�)�:�M �v�]/�
+2025-07-29 21:46:23,526 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: i��"l��T���bΫB]�����RǇ��0o�kk�#��X�(]XV��v�Q@��A����!��Y�3_s�L4̇�/���O�0�;�c�Y��O� ӝo����3^�G�2�"��q�ń��+-���\�7'��~P���b�'����S��c$m�
+2025-07-29 21:46:23,526 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: ��O�3��V 
+2025-07-29 21:46:23,526 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request:   �   #   3��zz  ���,Nz,������zE�$�J�,'
+2025-07-29 21:46:23,527 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: -��,U`s���z��[��8-�n�A���x�5�l�tP[(X����1R�,����7GӣI�%�����ia7Z-�`{բ�ь3��|���,���gp��3	_ظ�i�[���2��̂o�6l73�hy��y��*����E]��+�P<(U��'�+� �	�L�
+2025-07-29 21:46:23,527 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �/�qb�6	;��h�)�o-�W�kp$Z�-�)�ӓ|2J��J���5�A�j��)�{�cfR�3=ũp��1�4,'����:��Uo����7C�a�gj�CIX׺u�v�U05b�a/�`dj����W2:zx�J(�7�,����1�w5yg��&Q��/u=�%	�"<�
+2025-07-29 21:46:23,528 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: +$�w�giei%�:jc�	��	�'�q&#x�"�)�O<�iai�y P�id�T^t�u��Aߣ�cQ���J�	� g��|eY%{�Cw�� ��|���.r2xHw�:����Vp1�k ����f9c�BIqD���Q�	�
+2025-07-29 21:46:23,535 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �Pa�Tj�����
+2025-07-29 21:46:23,535 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �����9��_@�U��֔+Ԫ����GE
+2025-07-29 21:46:23,536 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �i8���jf�DDC�4�N9ֆ�pΘj>�p^"+�+�(aH�n�B�fhdfE�V�<��Qn�`�5�w�Q��q� �órW��1?�
+2025-07-29 21:46:23,536 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: ��
+2025-07-29 21:46:23,536 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: �h	�+��s⬴a���bx�^���&���9V�2���Ò��x"��4#��/J�#���Q��n�O6,Z�s�\�4� �Pd�л��VT?WJUɌ�R�4Qê�`)�^���>��d���i�t�s��X�!��4�O�z  K�4�����B�/�4*u�6�e:�'��r �ĭ]�i4Y�B]���D�#��I�B�]kh�\�Za�pW�N�X��쮔b�3�8�놊Eǂ�)�B �l6�Pn2
+2025-07-29 21:46:23,537 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: ��b��oO�S�S�y,lY����N�hy	̄�}�De��)�06�9<�K��vB�� ��)J�.Y�lRcm��Bg C�8�2!����@��a��|9��{��DI�Tc�f��O�8R�B��`�n�P����}B|ěAc�� C�6͑l ��53��vF��5��d?�X��֙��l��p+��J�)�<#d�	`����$(\y��U�^@�|MBo�x	'� ɇ�$2bL]�4��?lg~�oU؊@V<X���.-:�B�ҘN���rN[���/9|fڜB�kR��P�
+2025-07-29 21:46:30,323 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:46:30,324 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com:8081
+2025-07-29 21:46:30,324 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:46:30,324 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Cache-Control: max-age=0
+2025-07-29 21:46:30,324 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:46:30,324 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:46:30,325 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:46:30,325 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:46:30,325 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:46:30,346 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /favicon.ico HTTP/1.1
+2025-07-29 21:46:30,347 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com:8081
+2025-07-29 21:46:30,348 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:46:30,348 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:46:30,348 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-29 21:46:30,348 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Referer: http://a.com:8081/
+2025-07-29 21:46:30,349 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:46:30,349 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:46:41,997 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com:8081
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:46:41,998 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:46:46,796 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:46:46,973 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:46:50,296 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-29 21:46:50,297 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com:8081
+2025-07-29 21:46:50,297 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:46:50,297 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:46:50,297 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:46:50,297 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:46:50,298 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:46:50,298 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:49:29,412 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: null
+2025-07-29 21:52:27,925 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:52:28,103 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:53:47,769 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.0
+2025-07-29 21:53:47,771 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:53:47,771 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:53:47,772 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:53:47,772 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:53:47,773 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36
+2025-07-29 21:53:47,773 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:53:47,773 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:53:47,774 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:01,247 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /favicon.ico HTTP/1.0
+2025-07-29 21:54:01,247 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:54:01,247 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:01,247 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:01,248 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36
+2025-07-29 21:54:01,248 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-29 21:54:01,248 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Referer: http://a.com/
+2025-07-29 21:54:01,248 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:01,248 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:28,739 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.0
+2025-07-29 21:54:28,739 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.0
+2025-07-29 21:54:28,740 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:28,739 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.0
+2025-07-29 21:54:28,740 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:28,740 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:28,740 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:28,740 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:28,740 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Cache-Control: max-age=0
+2025-07-29 21:54:28,741 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:28,741 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:28,741 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:54:28,741 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:28,741 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Cache-Control: max-age=0
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Cache-Control: max-age=0
+2025-07-29 21:54:28,742 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:54:28,743 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:28,743 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:28,743 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:54:28,743 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:28,743 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:28,743 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /favicon.ico HTTP/1.0
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Referer: http://b.com/
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:28,770 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:30,808 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.0
+2025-07-29 21:54:30,808 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:30,808 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:30,808 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:30,808 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:54:30,808 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:30,809 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:54:30,809 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:30,809 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello HTTP/1.0
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:41,662 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:54:41,663 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:41,663 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:54:44,622 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:54:44,623 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: null
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:55:04,781 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:07,379 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:07,380 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:20,202 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /favicon.ico HTTP/1.0
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Referer: http://a.com/service.Hello2
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:25,875 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:30,660 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:30,661 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:35,077 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:35,077 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:35,077 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:35,077 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:35,078 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:35,078 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:35,078 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:35,078 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:35,078 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:35,915 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:35,915 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:35,915 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:35,915 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:35,915 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:35,916 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:35,916 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:35,916 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:35,916 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:36,420 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:36,916 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:36,916 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:36,917 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:56:43,292 INFO [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:57:06,139 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 21:57:06,315 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 21:57:11,726 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:57:11,727 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:57:11,728 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:57:24,455 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello HTTP/1.1
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:57:24,455 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:57:24,456 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:57:24,456 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:57:24,456 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:57:24,456 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:57:24,456 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:57:24,456 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:57:27,406 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.1
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:57:27,407 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:58:23,164 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.1
+2025-07-29 21:58:23,164 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: localhost:8081
+2025-07-29 21:58:23,164 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: keep-alive
+2025-07-29 21:58:23,164 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-mobile: ?0
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: sec-ch-ua-platform: "Windows"
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Site: none
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Mode: navigate
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-User: ?1
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Sec-Fetch-Dest: document
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-29 21:58:23,165 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:58:32,701 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:58:32,701 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 21:59:29,780 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: null
+2025-07-29 21:59:29,780 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 21:59:29,780 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 21:59:29,781 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 22:00:25,629 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 22:00:25,629 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 22:00:25,630 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 22:00:58,901 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 22:00:58,901 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 22:00:58,901 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 22:00:58,902 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 22:00:58,902 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 22:00:58,902 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36
+2025-07-29 22:00:58,902 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 22:00:58,902 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 22:00:58,902 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 22:02:20,787 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 22:02:20,788 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 22:02:20,789 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 22:03:12,913 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-29 22:03:13,104 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-29 22:03:17,542 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 22:03:17,543 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: a.com
+2025-07-29 22:03:17,543 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 22:03:17,543 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 22:03:17,543 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 22:03:17,543 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 22:03:17,543 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 22:03:17,544 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 22:03:17,544 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-29 22:03:29,808 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-29 22:03:29,808 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Host: b.com
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: X-Real-IP: 127.0.0.1
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Connection: close
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Upgrade-Insecure-Requests: 1
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Encoding: gzip, deflate
+2025-07-29 22:03:29,809 DEBUG [] s.RequestProcessor [RequestProcessor.java:119] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:25:28,007 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-30 09:25:28,227 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-30 09:25:53,691 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:25:53,692 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:25:53,692 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:25:53,692 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:25:53,693 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:25:53,693 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:25:53,693 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:25:53,693 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:25:53,693 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:26:00,419 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /favicon.ico HTTP/1.0
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Referer: http://b.com/service.Hello2
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:26:00,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:26:10,615 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:26:10,615 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:26:10,615 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:26:10,615 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:26:10,615 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:26:10,616 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:26:10,616 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:26:10,616 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:26:10,616 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:26:22,254 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:26:22,254 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:26:22,254 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:26:22,255 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:26:22,255 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:26:22,255 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:26:22,255 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:26:22,255 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:26:22,255 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:26:33,512 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:26:33,512 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:26:48,917 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:26:48,917 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:26:52,159 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:26:52,160 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:27:16,118 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:27:16,119 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:27:41,031 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:27:41,031 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:27:41,031 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:27:41,035 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:27:41,035 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:27:41,035 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:27:41,035 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:27:41,036 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:27:41,036 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:29:44,597 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-30 09:29:44,783 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-30 09:29:50,813 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello2 HTTP/1.0
+2025-07-30 09:29:50,814 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:29:50,814 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:29:50,814 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:29:50,814 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:29:50,814 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:29:50,815 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:29:50,815 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:29:50,815 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:30:00,735 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.0
+2025-07-30 09:30:00,735 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: b.com
+2025-07-30 09:30:00,735 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: X-Real-IP: 127.0.0.1
+2025-07-30 09:30:00,735 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: close
+2025-07-30 09:30:00,735 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:30:00,735 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:30:00,736 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:30:00,736 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate
+2025-07-30 09:30:00,736 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:30:39,435 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /service.Hello HTTP/1.1
+2025-07-30 09:30:39,436 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: localhost:8081
+2025-07-30 09:30:39,436 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: keep-alive
+2025-07-30 09:30:39,436 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:30:39,437 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:30:39,437 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:30:39,437 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:30:39,445 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:30:39,445 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:30:39,446 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Site: none
+2025-07-30 09:30:39,446 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:30:39,446 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-User: ?1
+2025-07-30 09:30:39,446 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Dest: document
+2025-07-30 09:30:39,446 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:30:39,448 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:30:39,471 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET /favicon.ico HTTP/1.1
+2025-07-30 09:30:39,472 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: localhost:8081
+2025-07-30 09:30:39,472 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: keep-alive
+2025-07-30 09:30:39,472 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:30:39,472 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:30:39,473 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:30:39,473 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:30:39,473 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-30 09:30:39,473 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Site: same-origin
+2025-07-30 09:30:39,473 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Mode: no-cors
+2025-07-30 09:30:39,473 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Dest: image
+2025-07-30 09:30:39,474 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Referer: http://localhost:8081/service.Hello
+2025-07-30 09:30:39,474 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:30:39,474 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:30:42,354 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-30 09:30:42,354 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: localhost:8081
+2025-07-30 09:30:42,355 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: keep-alive
+2025-07-30 09:30:42,355 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:30:42,355 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:30:42,355 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:30:42,355 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:30:42,356 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:30:42,356 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Purpose: prefetch;prerender
+2025-07-30 09:30:42,356 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Purpose: prefetch
+2025-07-30 09:30:42,356 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:30:42,356 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Site: none
+2025-07-30 09:30:42,357 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:30:42,357 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-User: ?1
+2025-07-30 09:30:42,357 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Dest: document
+2025-07-30 09:30:42,357 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:30:42,358 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:31:05,231 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-30 09:31:05,231 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: localhost:8081
+2025-07-30 09:31:05,231 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: keep-alive
+2025-07-30 09:31:05,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:31:05,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:31:05,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:31:05,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:31:05,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Site: none
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-User: ?1
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Dest: document
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:31:05,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:31:10,230 INFO [] s.RequestProcessor [RequestProcessor.java:40] Request-Line: GET / HTTP/1.1
+2025-07-30 09:31:10,231 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Host: localhost:8081
+2025-07-30 09:31:10,231 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Connection: keep-alive
+2025-07-30 09:31:10,231 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:31:10,231 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:31:10,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:31:10,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:31:10,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:31:10,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:31:10,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Site: none
+2025-07-30 09:31:10,232 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:31:10,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-User: ?1
+2025-07-30 09:31:10,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Sec-Fetch-Dest: document
+2025-07-30 09:31:10,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:31:10,233 DEBUG [] s.RequestProcessor [RequestProcessor.java:118] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:34:18,412 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-30 09:34:18,605 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-30 09:34:25,064 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET / HTTP/1.1
+2025-07-30 09:34:25,065 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:34:25,065 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:34:25,065 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:34:25,065 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:34:25,065 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:34:25,066 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:34:25,066 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:34:25,066 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:34:25,066 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:34:25,066 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:34:25,067 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:34:25,067 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:34:25,067 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:34:25,067 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:34:36,534 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET / HTTP/1.1
+2025-07-30 09:34:36,534 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:34:36,535 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:34:36,536 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:34:36,536 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:34:36,536 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:35:13,488 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /test.exe HTTP/1.1
+2025-07-30 09:35:30,245 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:35:30,245 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:35:30,246 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:36:00,359 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /etc/passwd HTTP/1.1
+2025-07-30 09:36:09,549 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:36:09,553 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:36:09,554 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:36:09,554 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:36:09,554 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:37:23,777 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:37:33,327 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /etc/passwd HTTP/1.1
+2025-07-30 09:37:45,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:37:45,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:37:45,422 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:37:45,423 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:37:45,423 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:37:45,423 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:38:33,714 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /etc/passwd HTTP/1.1
+2025-07-30 09:38:40,419 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:38:40,420 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:38:40,420 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+2025-07-30 09:38:40,420 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:38:40,420 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:38:40,420 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:38:40,420 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:38:40,421 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko,en;q=0.9,en-US;q=0.8
+2025-07-30 09:38:41,946 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /favicon.ico HTTP/1.1
+2025-07-30 09:38:43,451 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:38:43,452 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:38:43,452 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:38:43,452 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+2025-07-30 09:38:43,452 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: same-origin
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: no-cors
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: image
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Referer: http://localhost:8081/etc/passwd
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:38:43,453 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko,en;q=0.9,en-US;q=0.8
+2025-07-30 09:40:39,924 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:41:00,311 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /etc/passwd HTTP/1.1
+2025-07-30 09:41:02,724 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:41:02,724 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:41:02,724 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:41:02,724 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:41:02,724 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:41:02,725 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:41:02,725 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:41:02,725 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:41:02,725 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Site: none
+2025-07-30 09:41:02,725 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:41:02,725 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-User: ?1
+2025-07-30 09:41:02,726 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Sec-Fetch-Dest: document
+2025-07-30 09:41:02,726 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:41:02,726 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+2025-07-30 09:42:43,652 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:45:39,785 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:45:39,785 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:45:39,786 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:45:39,786 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: */*
+2025-07-30 09:45:39,786 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Postman-Token: 41780751-a617-430c-aeaa-c3ed06863907
+2025-07-30 09:45:39,786 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:45:39,786 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:45:39,786 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:45:47,870 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:45:47,870 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:45:47,871 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:45:47,871 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: */*
+2025-07-30 09:45:47,871 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Postman-Token: c369f008-a9d8-42d6-91aa-3ffe9994fb18
+2025-07-30 09:45:47,871 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:45:47,871 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:45:47,871 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:46:26,501 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:46:26,501 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:46:26,501 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:46:26,501 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: */*
+2025-07-30 09:46:26,501 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Postman-Token: bb71ed6c-4b14-477c-8d4c-23ef1434de7f
+2025-07-30 09:46:26,501 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:46:26,501 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:46:26,501 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:46:55,758 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: null
+2025-07-30 09:46:55,758 INFO [] s.RequestProcessor [RequestProcessor.java:41] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:46:55,758 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:46:55,759 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept: */*
+2025-07-30 09:46:55,759 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Postman-Token: 2b027563-48ab-4cae-90c3-5070439ad3fc
+2025-07-30 09:46:55,759 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Host: localhost:8081
+2025-07-30 09:46:55,759 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:46:55,759 DEBUG [] s.RequestProcessor [RequestProcessor.java:140] Request: Connection: keep-alive
+2025-07-30 09:49:35,354 DEBUG [main] HttpServerApplication [HttpServerApplication.java:20] DHhan Boot init!!
+2025-07-30 09:49:35,547 INFO [main] s.ServerRunner [ServerRunner.java:34] [INFO] 서버 시작됨: 포트 8081
+2025-07-30 09:49:42,929 INFO [] s.RequestProcessor [RequestProcessor.java:42] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:49:42,930 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:49:42,931 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept: */*
+2025-07-30 09:49:42,931 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Postman-Token: 1b106778-d1c9-40bb-bcc2-4dc0a1e2210d
+2025-07-30 09:49:42,931 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Host: localhost:8081
+2025-07-30 09:49:42,931 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:49:42,931 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Connection: keep-alive
+2025-07-30 09:49:47,185 INFO [] s.RequestProcessor [RequestProcessor.java:42] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:49:47,185 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:49:47,185 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept: */*
+2025-07-30 09:49:47,186 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Postman-Token: ea842a5f-54c3-42c0-b095-1cd2a0d98cda
+2025-07-30 09:49:47,186 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Host: localhost:8081
+2025-07-30 09:49:47,186 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:49:47,186 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Connection: keep-alive
+2025-07-30 09:49:48,057 INFO [] s.RequestProcessor [RequestProcessor.java:42] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:49:48,057 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:49:48,057 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept: */*
+2025-07-30 09:49:48,058 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Postman-Token: 7ae973a8-7f6a-4a98-89bd-59d59856b2cb
+2025-07-30 09:49:48,058 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Host: localhost:8081
+2025-07-30 09:49:48,058 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:49:48,058 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Connection: keep-alive
+2025-07-30 09:49:49,025 INFO [] s.RequestProcessor [RequestProcessor.java:42] Request-Line: GET /../../../../etc/passwd HTTP/1.1
+2025-07-30 09:49:49,026 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: User-Agent: PostmanRuntime/7.44.1
+2025-07-30 09:49:49,026 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept: */*
+2025-07-30 09:49:49,026 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Postman-Token: 1e2755a6-0a1f-442a-933a-ed80f3843455
+2025-07-30 09:49:49,027 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Host: localhost:8081
+2025-07-30 09:49:49,031 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept-Encoding: gzip, deflate, br
+2025-07-30 09:49:49,031 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Connection: keep-alive
+2025-07-30 09:49:56,943 INFO [] s.RequestProcessor [RequestProcessor.java:42] Request-Line: GET /etc/passwd HTTP/1.1
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Host: localhost:8081
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Connection: keep-alive
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: sec-ch-ua-mobile: ?0
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: sec-ch-ua-platform: "Windows"
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Upgrade-Insecure-Requests: 1
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-07-30 09:49:56,943 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Sec-Fetch-Site: none
+2025-07-30 09:49:56,944 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Sec-Fetch-Mode: navigate
+2025-07-30 09:49:56,944 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Sec-Fetch-User: ?1
+2025-07-30 09:49:56,944 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Sec-Fetch-Dest: document
+2025-07-30 09:49:56,944 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept-Encoding: gzip, deflate, br, zstd
+2025-07-30 09:49:56,944 DEBUG [] s.RequestProcessor [RequestProcessor.java:141] Request: Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7

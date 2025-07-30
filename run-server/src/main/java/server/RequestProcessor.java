@@ -12,6 +12,7 @@ import servlet.CustomServlet;
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.AccessDeniedException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -37,6 +38,7 @@ public class RequestProcessor implements Runnable {
 
             // 요청 읽기
             String requestLine = in.readLine();
+            if (requestLine == null) return;
             logger.info("Request-Line: "+requestLine);
             String[] tokens = requestLine.split(" ");
             String method = tokens[0];
@@ -52,6 +54,12 @@ public class RequestProcessor implements Runnable {
                 String path = req.getPath();
                 String className;
                 Map<String, String> mappings = ConfigLoader.getInstance().getServerConfig().servlet_mappings;
+
+                // 0. /../../ 가 포함되어있거나
+                // .exe 요청시 forbidden
+                if (isForbiddenAccess(req)) {
+                    throw new AccessDeniedException("권한 없음");
+                }
 
                 // 1. 루트 요청이면 index.html 반환 시도
                 if ("/".equals(path)) {
@@ -90,14 +98,15 @@ public class RequestProcessor implements Runnable {
 
                 if (obj instanceof CustomServlet) {
                     ((CustomServlet) obj).service(req,res);
-                    res.getWriter().flush();
                 } else {
                     throw new ClassCastException(className + "is not a CustomServlet");
                 }
             }catch (ClassNotFoundException e) {
                 errorPageHandler.handle404(req,res);
 
-            }catch (Exception e) {
+            }catch (AccessDeniedException e){
+                errorPageHandler.handle403(req,res);
+            } catch (Exception e) {
                 errorPageHandler.handle500(req,res);
                 logger.error(e.getMessage(),e);
             }
@@ -107,9 +116,22 @@ public class RequestProcessor implements Runnable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    private boolean isForbiddenAccess(CustomHttpRequest req) {
+        String path = req.getPath();
 
+        // 조건 1: 디렉터리 탈출 시도
+        if (path.contains("..")) {
+            return true;
+        }
 
+        // 조건 2: .exe 파일 요청 차단
+        if (path.toLowerCase().endsWith(".exe")) {
+            return true;
+        }
+
+        return false;
     }
 
     public Map<String,String> processHeaders(BufferedReader in) throws IOException {

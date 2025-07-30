@@ -9,6 +9,7 @@ import java.io.Writer;
 public abstract class CustomBaseServlet implements CustomServlet{
     @Override
     public void service(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
+
         String method = req.getMethod();
         switch (method) {
             case "GET": doGet(req, res); break;
