@@ -6,6 +6,8 @@ import config.ServerConfig;
 import handler.ErrorPageHandler;
 import http.CustomHttpRequest;
 import http.CustomHttpResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class DefaultErrorPageHandler implements ErrorPageHandler {
+    private final Logger logger = LoggerFactory.getLogger(DefaultErrorPageHandler.class);
     private final ServerConfig serverConfig;
     public DefaultErrorPageHandler(ServerConfig serverConfig) {
         this.serverConfig = serverConfig;
@@ -20,37 +23,45 @@ public class DefaultErrorPageHandler implements ErrorPageHandler {
 
     @Override
     public void handle403(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
-        HostConfig host = getHostConfig(req);
-        String filePath = host.http_root + "/" + host.error_pages.get("403");
-        String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
-        res.setStatus(403);
-        res.setHeader("Content-Type", "text/html");
-        res.write(body);
+        try {
+            HostConfig host = getHostConfig(req);
+            String filePath = host.http_root + "/" + host.error_pages.get("403");
+            String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+            res.setStatus(403);
+            res.setHeader("Content-Type", "text/html");
+            res.write(body);
+        }catch (IOException e){
+            logger.warn("403 응답 전송 실패 (클라이언트 연결 끊김 가능성): {}", e.getMessage());
+        }
     }
 
     @Override
     public void handle404(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
-        HostConfig host = getHostConfig(req);
-        String filePath = host.http_root + "/" + host.error_pages.get("404");
-        String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
-        res.setStatus(404);
-        res.setHeader("Content-Type", "text/html");
-        res.write(body);
+        try {
+            HostConfig host = getHostConfig(req);
+            String filePath = host.http_root + "/" + host.error_pages.get("404");
+            String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+            res.setStatus(404);
+            res.setHeader("Content-Type", "text/html");
+            res.write(body);
+        }catch (IOException e) {
+            logger.warn("404 응답 전송 실패 (클라이언트 연결 끊김 가능성): {}", e.getMessage());
+        }
+
     }
 
     @Override
     public void handle500(CustomHttpRequest req, CustomHttpResponse res) throws IOException {
-        HostConfig host = getHostConfig(req);
-        String filePath = host.http_root + "/" + host.error_pages.get("500");
-        String body;
         try {
-            body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
-        } catch (IOException ex) {
-            body = "<h1>500 Internal Server Error</h1><pre>" + ex.getMessage() + "</pre>";
+            HostConfig host = getHostConfig(req);
+            String filePath = host.http_root + "/" + host.error_pages.get("500");
+            String body = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+            res.setStatus(500);
+            res.setHeader("Content-Type", "text/html");
+            res.write(body);
+        } catch (IOException e){
+            logger.warn("500 응답 전송 실패 (클라이언트 연결 끊김 가능성): {}", e.getMessage());
         }
-        res.setStatus(500);
-        res.setHeader("Content-Type", "text/html");
-        res.write(body);
     }
 
     private HostConfig getHostConfig(CustomHttpRequest req) {

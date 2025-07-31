@@ -2,6 +2,7 @@ package http;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -29,10 +30,11 @@ public class CustomHttpResponse {
 
     public void write(String body) throws IOException {
         writer.write("HTTP/1.1 " + statusCode + " " + getStatusMessage(statusCode) + "\r\n");
+        setHeader("Connection","close");
         for (Map.Entry<String,String> entry : headers.entrySet()) {
             writer.write(entry.getKey()+": "+entry.getValue()+"\r\n");
         }
-        writer.write("Content-Length: " + body.getBytes().length + "\r\n");
+        writer.write("Content-Length: " + body.getBytes(StandardCharsets.UTF_8).length + "\r\n");
         writer.write("\r\n");
         writer.write(body);
         writer.flush();

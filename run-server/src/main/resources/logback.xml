@@ -19,8 +19,26 @@
         </encoder>
     </appender>
 
-    <root level="debug">
-        <appender-ref ref="FILE" />
+    <!-- AsyncAppender로 감싸기 -->
+    <appender name="ASYNC_CONSOLE" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>8192</queueSize> <!-- 큐 버퍼 크기 (기본: 256) -->
+        <discardingThreshold>0</discardingThreshold> <!-- 과부하 시 삭제 기준 (0=안버림) -->
+        <includeCallerData>true</includeCallerData> <!-- %caller, %class 등 사용 시 필요 -->
         <appender-ref ref="STDOUT" />
+    </appender>
+
+    <!-- AsyncAppender로 감싸기 -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>8192</queueSize> <!-- 큐 버퍼 크기 (기본: 256) -->
+        <discardingThreshold>0</discardingThreshold> <!-- 과부하 시 삭제 기준 (0=안버림) -->
+        <includeCallerData>true</includeCallerData> <!-- %caller, %class 등 사용 시 필요 -->
+        <appender-ref ref="FILE" />
+    </appender>
+
+    <root level="debug">
+<!--        <appender-ref ref="FILE" />-->
+<!--        <appender-ref ref="STDOUT" />-->
+        <appender-ref ref="ASYNC_FILE" />
+        <appender-ref ref="ASYNC_CONSOLE" />
     </root>
 </configuration>

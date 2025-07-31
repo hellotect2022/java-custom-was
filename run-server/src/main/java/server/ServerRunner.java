@@ -34,6 +34,7 @@ public class ServerRunner {
             logger.info("[INFO] 서버 시작됨: 포트 "+port);
             while (true) {
                 Socket client = serverSocket.accept();
+                client.setSoTimeout(3000); // 3초 안에 데이터 안 오면 끊음
                 RequestProcessor processor = new RequestProcessor(client, errorPageHandler);
                 executorService.execute(processor);
             }

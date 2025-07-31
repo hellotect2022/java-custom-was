@@ -81,7 +81,6 @@ public class RequestProcessor implements Runnable {
                     }
                 }
 
-
                 if (mappings.containsKey(path)) {
                     className = mappings.get(path);
                 } else {
@@ -106,15 +105,22 @@ public class RequestProcessor implements Runnable {
 
             }catch (AccessDeniedException e){
                 errorPageHandler.handle403(req,res);
-            } catch (Exception e) {
+            }catch (IOException e) {
+                logger.warn("연결이 끊김: ",e.getMessage());
+            }catch (Exception e) {
                 errorPageHandler.handle500(req,res);
                 logger.error(e.getMessage(),e);
+            } finally {
+                try {
+                    conn.close();
+                } catch (IOException e) {
+                    logger.warn("소켓 닫기 실패: {}", e.getMessage());
+                }
             }
-
-            conn.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
+
         }
     }
 
