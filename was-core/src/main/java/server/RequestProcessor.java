@@ -17,11 +17,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class RequestProcessor implements Runnable {
     private final Logger logger = LoggerFactory.getLogger(RequestProcessor.class);
     private final Socket conn;
     private final ErrorPageHandler errorPageHandler;
+    private static final Map<String, CustomServlet> servletInstanceCache = new ConcurrentHashMap<>();
+
 
 
     public RequestProcessor(Socket conn, ErrorPageHandler errorPageHandler) {
@@ -90,16 +93,29 @@ public class RequestProcessor implements Runnable {
                 // Java Reflection API 사용
                 // JVM 이 현재 classpath 에서 해당 이름의 클래스를 동적으로 찾아서 Class 객체로 반환
                 //  Class<?> 는 class 의 메타데이타
-                Class<?> clazz = Class.forName(className);
+                //Class<?> clazz = Class.forName(className);
                 // clazz.getDeclaredConstructor() : 클래스의 **기본 생성자(파라미터 없는 생성자)**를 가져옴
                 // .newInstance : 생성자를 실행해서 실제 객체를 생성
-                Object obj = clazz.getDeclaredConstructor().newInstance();
+                //Object obj = clazz.getDeclaredConstructor().newInstance();
 
-                if (obj instanceof CustomServlet) {
-                    ((CustomServlet) obj).service(req,res);
+                CustomServlet servlet;
+                if (servletInstanceCache.containsKey(className)) {
+                    servlet = servletInstanceCache.get(className);
                 } else {
-                    throw new ClassCastException(className + "is not a CustomServlet");
+                    Class<?> clazz = Class.forName(className);
+                    servlet = (CustomServlet) clazz.getDeclaredConstructor().newInstance();
+                    servletInstanceCache.put(className, servlet);
                 }
+                long start = System.nanoTime();
+                servlet.service(req,res);
+                long end = System.nanoTime();
+                logger.debug("Servlet 처리 시간: {}ms", (end - start) / 1_000_000);
+//                if (obj instanceof CustomServlet) {
+//                    ((CustomServlet) obj).service(req,res);
+//                } else {
+//                    throw new ClassCastException(className + "is not a CustomServlet");
+//                }
+
             }catch (ClassNotFoundException e) {
                 errorPageHandler.handle404(req,res);
 
@@ -144,7 +160,7 @@ public class RequestProcessor implements Runnable {
         Map<String,String> requestHeaders = new HashMap<>();
         String line;
         while ((line = in.readLine()) != null && !line.isEmpty()) {
-            logger.debug("Request: "+ line);
+            //logger.debug("Request: "+ line);
             int colonIndex = line.indexOf(":");
             if (colonIndex != -1) {
                 String key = line.substring(0,colonIndex).trim();

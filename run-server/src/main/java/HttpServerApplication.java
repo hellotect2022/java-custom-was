@@ -19,6 +19,7 @@ public class HttpServerApplication {
 
     public static void main(String[] args) throws Exception {
         logger.debug("DHhan Boot init!!");
+        logger.info("JVM PID: {}", ProcessHandle.current().pid());
         printBannerFromResource();
 
         try {
